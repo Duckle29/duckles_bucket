@@ -1,0 +1,29 @@
+{
+    "version": "18880.dfddd19b15",
+    "description": "Nightly build of KiCAD 64bit: An Electronics Design Automation Suite",
+    "homepage": "https://kicad-pcb.org",
+    "license": "GPL-3.0-only",
+    "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-r18880.dfddd19b17-x86_64.exe#/dl.7z",
+    "hash": "401183c6dbd3394dc5c34958ccd82aed1b1eaeea5881a3a477390275836d3c79",
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse",
+    "bin": "bin\\kicad.exe",
+    "shortcuts": [
+        [
+            "bin\\kicad.exe",
+            "KiCad nightly"
+        ]
+    ],
+    "env_set": {
+        "KICAD_PTEMPLATES": "$dir\\share\\kicad\\template\\",
+        "KISYS3DMOD": "$dir\\share\\kicad\\modules\\packages3d\\",
+        "KISYSMOD": "$dir\\share\\kicad\\modules\\"
+    },
+    "checkver": {
+        "url": "https://kicad-downloads.s3.cern.ch/?prefix=windows/nightly",
+        "regex": "kicad-r([\\d]+.[a-f0-9]+)-x86_64",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-r$version-x86_64.exe#/dl.7z"
+    }
+}

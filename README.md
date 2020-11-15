@@ -1,2 +1,1 @@
-# duckles_bucket
-My scoop bucket for scoop things
+# This is my bucket of apps for scoop
