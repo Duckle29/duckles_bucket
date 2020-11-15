@@ -25,9 +25,12 @@ jobs:
       - name: Run checkver
         shell: powershell
         run: |
+          dir
+          dir scoop
+          dir scoop\bin
           $curr_dir = (Get-Item -Path '.\' -Verbose).FullName
           $scoop_path = $curr_dir + '\scoop'
-          
+
           $checkver_path = $scoop_path + "\bin\checkver.ps1"
           $args = "-Dir .\bucket -Update"
 
