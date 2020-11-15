@@ -17,14 +17,16 @@ jobs:
         shell: powershell
         run: |
           Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+          $env:SCOOP=$GITHUB_WORKSPACE + '\scoop'
+          [Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
           iwr -useb get.scoop.sh | iex
 
       - name: Run checkver
         shell: powershell
         run: |
-          $scoop_path = scoop prefix scoop
+          $scoop_path = $GITHUB_WORKSPACE + '\scoop'
           $checkver_path = $scoop_path + "\bin\checkver.ps1"
-          $args = "-Dir ./bucket -Update"
+          $args = "-Dir .\bucket -Update"
 
           $cmd = $checkver_path + $args
           iex $cmd
