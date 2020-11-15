@@ -13,16 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Install scoop
+      - name: Install scoop and run checkvar
         shell: powershell
         run: |
           Set-ExecutionPolicy RemoteSigned -scope CurrentUser
           iwr -useb get.scoop.sh | iex
-          scoop prefix scoop
 
-      - name: Run checkver
-        shell: powershell
-        run: |
           $scoop_path = scoop prefix scoop
           $checkver_path = $scoop_path + "\bin\checkver.ps1"
           $args = "-Dir .\bucket -Update"
