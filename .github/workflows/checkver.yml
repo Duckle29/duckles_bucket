@@ -18,7 +18,8 @@ jobs:
         run: |
           Set-ExecutionPolicy RemoteSigned -scope CurrentUser
           iwr -useb get.scoop.sh | iex
-
+          scoop install aria2
+          
           $scoop_path = scoop prefix scoop
           $checkver_path = $scoop_path + "\bin\checkver.ps1"
           $args = "-Dir .\bucket -Update"
