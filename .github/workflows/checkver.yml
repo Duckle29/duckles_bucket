@@ -26,3 +26,9 @@ jobs:
 
           $cmd = $checkver_path + $args
           iex $cmd
+      
+      - uses: EndBug/add-and-commit@v5
+        with:
+          message: "Bot: Daily manifest update"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
