@@ -28,7 +28,7 @@ jobs:
           $checkver_path = $scoop_path + "\bin\checkver.ps1"
           $args = "-Dir .\bucket -Update"
 
-          $cmd = $checkver_path + $args
+          $cmd = $checkver_path + " " + $args
           iex $cmd
       
       - uses: EndBug/add-and-commit@v5
