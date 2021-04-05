@@ -1,10 +1,10 @@
 {
-    "version": "18901.8a4992b528",
+    "version": "21995.a6c3d74a73",
     "description": "Nightly build of KiCAD 64bit: An Electronics Design Automation Suite",
     "homepage": "https://kicad-pcb.org",
     "license": "GPL-3.0-only",
-    "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-r18901.8a4992b528-x86_64.exe#/dl.7z",
-    "hash": "350a257ba342cd1b1843c04c162dbf3a666ad71f42f724e5c7c28a90d5ec3205",
+    "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-msvc.r21995.a6c3d74a73-x86_64.exe#/dl.7z",
+    "hash": "7cb6a796d39912cdebef612850b53f70e6b361db9bbab27b6c68b4bb19fb9822",
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse",
     "bin": "bin\\kicad.exe",
     "shortcuts": [
@@ -20,10 +20,10 @@
     },
     "checkver": {
         "url": "https://kicad-downloads.s3.cern.ch/?prefix=windows/nightly",
-        "regex": "kicad-r([\\d]+.[a-f0-9]+)-x86_64",
+        "regex": "kicad-.*r([\\d]+.[a-f0-9]+)-x86_64",
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-r$version-x86_64.exe#/dl.7z"
+        "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-msvc.r$version-x86_64.exe#/dl.7z"
     }
 }
