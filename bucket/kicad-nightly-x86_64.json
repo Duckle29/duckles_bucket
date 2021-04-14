@@ -1,10 +1,10 @@
 {
-    "version": "22074.675444a646",
+    "version": "22140.296a9df530",
     "description": "Nightly build of KiCAD 64bit: An Electronics Design Automation Suite",
     "homepage": "https://kicad-pcb.org",
     "license": "GPL-3.0-only",
-    "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-msvc.r22074.675444a646-x86_64.exe#/dl.7z",
-    "hash": "3111057fef5f8998e0a14e71321da66884287dd08c14f2be2611a645a46e0a86",
+    "url": "https://kicad-downloads.s3.cern.ch/windows/nightly/kicad-msvc.r22140.296a9df530-x86_64.exe#/dl.7z",
+    "hash": "07c47599fd9a7e12b0d1ee017a69b44be4ff4413fbf416b2377dbcad63834809",
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse",
     "bin": "bin\\kicad.exe",
     "shortcuts": [
